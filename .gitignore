@@ -1,0 +1,5 @@
+.idea
+.vercel
+test.py
+certbot.bat
+vercel-prod.bat

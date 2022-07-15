@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0wLjIgLTAuMiA2LjQgNi40Ij4KICA8cGF0aCBkPSJNMCAzQTEgMSAwIDAwNiAzIDEgMSAwIDAwMCAzUTEuNzU0IDIuMjU3IDIuMDQxLjQ4MiAzLjMzMSAyLjU5OSA1Ljg1NiAyLjIwMgpNIDEuNzAxIDMuMzUxIEMgMS45MDMgNS4zMDMgMi42NDIgMi41ODEgMS42OTUgMy4zNDUgTSAzLjY0NiAzLjI4NyBDIDMuNzY4IDUuMjA3IDQuNzQzIDIuNjQ1IDMuNjQ2IDMuMjg3ICIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjAuMiIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4=">
+        <title>Todo Lodo | Web Portfolio</title>
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link rel="stylesheet" href="/static/css/index.css">
+    </head>
+    <body>
+        <header id="header">
+            <div class="header-contioner">
+                <div id="todo">Todo<span>is</span></span></div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="/" class="active">is</a></li>
+                        <li><a href="/">work</a></li>
+                        <li><a href="/">about</a></li>
+                        <li class="social-link">
+                            <a href="" target="_blank" title="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-labelledby="LinkedinIcoTitle" class="ico">
+                                    <title id="LinkedinIcoTitle">LinkedIn logo</title>
+                                    <path d="M14.8 0H1.2C.5 0 0 .5 0 1.2v13.7c0 .6.5 1.1 1.2 1.1h13.6c.7 0 1.2-.5 1.2-1.2V1.2c0-.7-.5-1.2-1.2-1.2zM4.7 13.6H2.4V6h2.4v7.6zM3.6 5c-.8 0-1.4-.7-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4-.1.7-.7 1.4-1.4 1.4zm10 8.6h-2.4V9.9c0-.9 0-2-1.2-2s-1.4 1-1.4 2v3.8H6.2V6h2.3v1c.3-.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v4.2z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-link">
+                            <a href="" target="_blank" title="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-labelledby="GithubIcoTitle" class="ico">
+                                    <title id="GithubIcoTitle">GitHub logo</title>
+                                    <path fill-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8c0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4v-1.4c-2.2.5-2.7-1.1-2.7-1.1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6 0 1.3-.1 2-.1s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.3.6.8.6 1.5v2.2c0 .2.1.5.6.4C13.7 14.5 16 11.5 16 8c0-4.4-3.6-8-8-8z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="scrollbar-container">
+            <div id="scrollbar"></div>
+        </div>
+        <main id="main">
+            <!--Landind div-->
+            <div class="tl" id="tl">
+                <!--blue-->
+                <svg class="tl-svg u" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M0 0 2 2 0 2Z" class="blue u"/>
+                </svg>
+                <svg class="tl-svg v" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M0 0 2 0 2 2Z" class="blue v"/>
+                </svg>
+                <svg class="tl-svg w" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M2 0 3 1 2 2Z" class="blue w"/>
+                </svg>
+                <svg class="tl-svg x" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M3 1 4 0 4 2Z" class="blue x"/>
+                </svg>
+                <svg class="tl-svg y" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M2 0 4 0 3 1Z" class="blue y"/>
+                </svg>
+                <svg class="tl-svg z" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M2 2 3 1 4 2Z" class="blue z"/>
+                </svg>
+                <svg class="tl-svg v" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M4 0 6 0 4 2Z" class="blue v"/>
+                </svg>
+                <svg class="tl-svg u" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M6 0 6 2 4 2Z" class="blue u"/>
+                </svg>
+                <svg class="tl-svg w" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M2 2 4 2 3 3Z" class="blue w"/>
+                </svg>
+                <svg class="tl-svg x" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M2 4 3 3 4 4Z" class="blue x"/>
+                </svg>
+                <svg class="tl-svg z" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M2 2 3 3 2 4Z" class="blue z"/>
+                </svg>
+                <svg class="tl-svg y" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M3 3 4 2 4 4Z" class="blue y"/>
+                </svg>
+                <svg class="tl-svg v" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M2 4 4 4 3 7Z" class="blue v"/>
+                </svg>
+                <svg class="tl-svg u" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M3 7 4 4 4 7Z" class="blue u"/>
+                </svg>
+                <svg class="tl-svg t" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M3 7 2 4 2 7Z" class="blue t"/>
+                </svg>
+                <!--orange-->
+                <svg class="tl-svg t" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M7 3 7 0 8 0Z" class="orange t"/>
+                </svg>
+                <svg class="tl-svg u" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M8 0 9 0 9 3Z" class="orange u"/>
+                </svg>
+                <svg class="tl-svg v" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M8 0 7 3 9 3Z" class="orange v"/>
+                </svg>
+                <svg class="tl-svg w" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M7 3 8 4 7 5Z" class="orange w"/>
+                </svg>
+                <svg class="tl-svg x" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M9 3 8 4 9 5Z" class="orange x"/>
+                </svg>
+                <svg class="tl-svg y" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M7 3 9 3 8 4Z" class="orange y"/>
+                </svg>
+                <svg class="tl-svg z" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M7 5 8 4 9 5Z" class="orange z"/>
+                </svg>
+                <svg class="tl-svg y" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M7 5 9 5 8 6Z" class="orange y"/>
+                </svg>
+                <svg class="tl-svg z" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M8 6 9 5 9 7Z" class="orange z"/>
+                </svg>
+                <svg class="tl-svg x" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M7 5 7 7 8 6Z" class="orange x"/>
+                </svg>
+                <svg class="tl-svg w" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M7 7 8 6 9 7Z" class="orange w"/>
+                </svg>
+                <svg class="tl-svg v" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M9 5 12 6 9 7Z" class="orange v"/>
+                </svg>
+                <svg class="tl-svg u" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M9 5 12 5V6Z" class="orange u"/>
+                </svg>
+                <svg class="tl-svg t" id="tl-svg" viewBox="-0.1 -0.1 12.2 7.2">
+                    <path d="M9 7 12 6V7Z" class="orange t"/>
+                </svg>
+            </div>
+
+            <!--Name Intro...-->
+            <div id="name">
+                <h1 class="title _big">TODO LODO <span class="orange">is</span></h1>
+                <div class="sub _small">
+                    <p class="_name orange sgap">Aaron Fredrick</p>
+                    <p class="__ blue">
+                        Web designer & developer, 
+                        <br>
+                        Graphic designer and Illustrator.
+                    </p>
+                </div>
+            </div>
+
+            <!--Curriculum Vitae-->
+            <div id="curriculum">
+                <h1 class="title _big">Curriculum Vitae</h1>
+                <div class="sub _small">
+                    <p>A showcase of lifetime work</p>
+                </div>
+            </div>
+            
+            <!--Headings-->
+            <div id="graphic" class="cd hds">
+                <h1 class="title _big">Graphic Designer</h1>
+                <p class="sub _small blue">(<span class="orange">2016 - present</span>)</p>
+            </div>
+            <div id="illust" class="cd hds">
+                <h1 class="title _big">Illustrator</h1>
+                <p class="sub _small blue">(<span class="orange">2017 - present</span>)</p>
+            </div>
+            <div id="web" class="cd hds">
+                <h1 class="title _big">Web Designer & Developer</h1>
+                <p class="sub _small blue">(<span class="orange">2019 - present</span>)</p>
+            </div>
+            <div id="extra" class="cd hds">
+                <h1 class="title _big">Extras</h1>
+                <p class="sub _small blue">Other skills</p>
+            </div>
+
+            <!--Space-->
+            <div class="space" id="space"></div>
+
+            <!--Static Section-->
+            <div id="static-wrapper">
+                <section class="scrolled" id="scrolled">
+                    <!--Void-->
+                    <div class="gap"></div>
+                   
+                    <div class="g gap">
+                        <p class="_big _1 pgap">
+                            Throughout the years since <span class="blue">2016</span>, I was 
+                            <span class="orange">developing and refining my graphic designing skills</span> 
+                            to a 
+                            <span class="orange">professional level</span> as a Freelancer.
+                        </p>
+                        <!---->
+                        <p class="_big _2">
+                            Initially my work was based around <span class="orange">sketches and Photoshop</span> which was soon moved onto <span class="orange">3D graphic works</span> as well.
+                        </p>
+                        <p class="_small">These included 3D animations and 3D static renders which were delivered to my clients as a part of my work.</p>
+                    </div>
+                    <div class="i gap">
+                        <p class="_1 _big">
+                            One year after getting involved in <span class="blue">Graphic designing</span> 
+                            my work was also focused on <span class="orange">Logo designing</span> and <span class="orange">Template designing</span> 
+                        </p>
+                        <p class="_small">
+                            Template designing were mainly focused on social media marketing and designing.
+                        </p>
+                    </div>
+                    <div class="w gap">
+                        <p class="_1 _big">
+                            Since <span class="blue">2019</span>, I started 
+                            <span class="orange">developing and refining my web development skills</span> 
+                            to a 
+                            <span class="orange">professional level</span> as a Freelancer.
+                        </p>
+                        <p class="_small pgap">
+                            These skills includes web designing and web backend development both together.
+                        </p>
+                        <!---->
+                        <p class="_2 _big">
+                            Initially I started developing <span class="orange">Mobile Web Apps</span> as a part of my studies.
+                        </p>
+                        <p class="_small pgap">
+                            In this time period I mostly developed backend skills as a part of web development.
+                        </p>
+                        <!---->
+                        <p class="_3 _big">
+                            Later on with <span class="blue">Interest</span> of learning new skills I started focusing on 
+                            <span class="orange">Intercative Web Development</span> which are both desktop and mobile friendly.
+                        </p>
+                        <p class="_small">
+                            In this time period I mostly developed backend skills as a part of web development
+                        </p>
+                    </div>
+                    <div class="e pgap">
+                        <div class="_1  pgap">
+                            <p class="_big orange">
+                                Python (py)
+                            </p>
+                            <div class="sub _small">
+                                <p class="blue sgap">
+                                    3 years of experience
+                                </p>
+                                <p>
+                                    Creating web servers, file handling, simulatons, automations, etc.
+                                </p>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="_2  pgap">
+                            <p class="_big orange">
+                                C-Sharp (C#)
+                            </p>
+                            <div class="sub _small">
+                                <p class="blue sgap">
+                                    1 years of experience
+                                </p>
+                                <p>
+                                    Creating simple games and simulations with unity engine.
+                                </p>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="_3  pgap">
+                            <p class="_big orange">
+                                DataBase (db)
+                            </p>
+                            <div class="sub _small">
+                                <p class="blue sgap">
+                                    3 years of experience
+                                </p>
+                                <p>
+                                    Creating sql databases and also with relation with servers.
+                                </p>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="_4  pgap">
+                            <p class="_big orange">
+                                MatLab (mat)
+                            </p>
+                            <div class="sub _small">
+                                <p class="blue sgap">
+                                    3 years of experience
+                                </p>
+                                <p>
+                                    Creating general scripts for mathematical functions.
+                                </p>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="_5  pgap">
+                            <p class="_big orange">
+                                Project Management
+                            </p>
+                            <div class="sub _small">
+                                <p class="blue sgap">
+                                    2 years of experience
+                                </p>
+                                <p>
+                                    Working as a freelance manager with employees and relevant projects.
+                                </p>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="_6  pgap">
+                            <p class="_big orange">
+                                Data Management
+                            </p>
+                            <div class="sub _small">
+                                <p class="blue sgap">
+                                    4 years of experience
+                                </p>
+                                <p>
+                                    Working as a freelance data analysist and encoder.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="end">
+                        <div class="made-with">
+                            <p class="heading">Made With</p>
+                            <div class="cols">
+                                <ul class="col">
+                                    <li class="ico">< ></li>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>PhotoShop</li>
+                                </ul>
+                                <ul class="col">
+                                    <li class="ico">~</li>
+                                    <li>+50h of thinking</li>
+                                    <li>+100h of overthinking</li>
+                                    <li>(lost count) cups of coffee</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thanks">
+                        <p class="_1">Thanks for checking my website!</p>
+                        <p class="_2 _big">
+                            Check out my
+                            <br>
+                            selected <a href="" class="orange">Works</a>
+                            <br>
+                            or 
+                            <br>
+                            Read <a href="" class="orange">About Me</a>
+                            For more Details 
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script src="/static/js/common.js"></script>
+        <script src="/static/js/index.js"></script>
+    </body>
+</html>

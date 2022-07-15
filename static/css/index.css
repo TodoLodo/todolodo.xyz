@@ -1,0 +1,252 @@
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.cd {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.hds {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sub {
+    padding-left: 1rem;
+}
+
+.sgap {
+    margin-bottom: 1rem;
+}
+
+.space {
+    width: 100%;
+    height: 600vh;
+}
+
+.tl {
+    position: fixed;
+    display: block;
+    visibility: visible;
+    top: 50vh;
+    left: 50vw;
+    width: 70vw;
+    height: 70vh;
+    transform: translate(-50%, -50%);
+    transition: transform .4s;  
+    overflow: visible!important;
+    transform-style: preserve-3d;
+    z-index: 21;
+}
+
+.tl-svg {
+    position: fixed;
+    visibility: inherit;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    transition: transform .4s;
+    overflow: visible!important;
+    z-index: 15;
+}
+
+.tl-svg.t {
+    transform: translateZ(10px) translate(-50%, -50%);
+}
+
+.tl-svg.u {
+    transform: translateZ(100px) translate(-50%, -50%);
+}
+
+.tl-svg.v {
+    transform: translateZ(190px) translate(-50%, -50%);
+}
+
+.tl-svg.w {
+    transform: translateZ(280px) translate(-50%, -50%);
+}
+
+.tl-svg.x {
+    transform: translateZ(370px) translate(-50%, -50%);
+}
+
+.tl-svg.y {
+    transform: translateZ(460px) translate(-50%, -50%);
+}
+
+.tl-svg.z {
+    transform: translateZ(550px) translate(-50%, -50%);
+}
+
+.tl .tl-svg path {
+    stroke-linejoin: round;
+    stroke-width: 0.1;
+    transition: transform .4s, stroke .4s;
+    overflow: visible!important;
+    transform-style: preserve-3d;
+    fill: none;
+    stroke-dasharray: 1000;
+    animation: tl-dashoffset 200s linear forwards;
+}
+
+@keyframes tl-dashoffset {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.tl .tl-svg .blue {
+    stroke: var(--color4);
+}
+
+.tl .tl-svg .orange {
+    stroke: var(--color2);
+}
+
+.tl.alternate-colors .tl-svg .blue {
+    stroke: var(--color2);
+}
+
+.tl.alternate-colors .tl-svg .orange {
+    stroke: var(--color4);
+}
+
+#name {
+    position: fixed;
+    display: none;
+    visibility: hidden;
+    width: auto;
+    height: auto;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    transition: transform .4s, opacity .4s;
+}
+
+#curriculum {
+    position: fixed;
+    width: auto;
+    height: auto;
+    display: none;
+    visibility: hidden;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    transition: transform .4s, opacity .4s;
+}
+
+#curriculum h1 {
+    color: transparent;
+    background: linear-gradient(to bottom, var(--color2), var(--color4), var(--color3));
+    background-size: auto 500%;    
+    background-position: top;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: curriculum-anim 3s infinite alternate;
+}
+
+@keyframes curriculum-anim {
+    from {
+        background-position: top;
+    }
+    to {
+        background-position: bottom;
+    }
+}
+
+#static-wrapper {
+    position: relative;
+    height: max-content;
+}
+
+.scrolled {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3rem;
+    left: 50vw;
+    height: auto;
+    transform: translateX(-50%);
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.scrolled .gap {
+    margin-bottom: 300vh;
+}
+
+.scrolled .pgap {
+    margin-bottom: 20vh;
+}
+
+.scrolled .end {
+    margin-bottom: 20vh;
+}
+
+.scrolled .end .made-with .heading {
+    color: var(--color3);
+    margin-bottom: 1rem;
+}
+
+.scrolled .end .cols {
+    display: flex;
+    grid-template: 1fr/repeat(auto-fit,minmax(150px,auto));
+    grid-gap: 2rem;
+    justify-content: left;
+    color: var(--color4);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.scrolled .end .cols ul, .scrolled .end .cols li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 1.5em;
+}
+
+.scrolled .end .cols li.ico {
+    min-height: 0;
+    margin-bottom: 2rem;
+}
+
+.scrolled .thanks {
+    padding-top: 2rem;
+}
+
+.scrolled .thanks p {
+    color: white;
+}
+
+.scrolled .thanks ._1 {
+    margin-bottom: 1rem;
+}
+
+.scrolled .thanks ._2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.scrolled .thanks ._2 a {
+    text-decoration: none;
+    transition: color .4s;
+}
+
+.scrolled .thanks ._2 a:hover {
+    color: var(--color4);
+}
