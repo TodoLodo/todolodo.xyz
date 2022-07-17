@@ -31,7 +31,7 @@ def status():
 
 @app.route('/', subdomain='cod-python-api')
 def sub1_index():
-    return render_template("cod.html")
+    return render_template("cod-python-api/index.html")
 
 
 @app.route('/stats', subdomain='cod-python-api')

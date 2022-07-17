@@ -23,16 +23,17 @@ Made With
         <li>
             <div class="i-f" style="display:inline-flex;">
                 HTML
-                <img class="mwi" src="https://simpleicons.org/icons/html5.svg" alt="html5" style="width: 15px;filter: invert();"/>
+                <svg height="17" style="margin-top:.2em;" viewBox="0 0 24 24"><path fill="#fff" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
             </div>
         </li>
         <li>
             <div class="i-f css" style="display:inline-flex;">
-                <span class="red" style="color:red;">C</span>
-                <span class="green" style="color:green;">S</span>
-                <span class="blue" style="color:blue;">S</span>
+                CSS
+                <img class="mwi" src="static/images/css3.svg" alt="css3" style="width: 15px;filter: invert();"/>
             </div>
         </li>
-        <li><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span></li>
+        <li>
+
+        </li>
     </ul>
     <script>console.log("possible");</script>
