@@ -19,24 +19,20 @@ Made With
 
 ..  raw:: html
 
-    <style>
-        * {margin: 0; padding: 0;}
-        .red {color:red;}
-        .blue {color: blue;}
-        .green {color: green;}
-        .cyan {color: cyan;}
-        .yellow {color: yellow;}
-        .magenta {color: magenta;}
-        .css {transition: filter 0.3s;}
-        .css:hover {filter: invert();}
-        .js {transition: color 0.3s;}
-        ul {margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px;}
-        li {font-weight: bold;}
-        .i-f {display:inline-flex;}
-        .mwi {width: 15px;filter: invert();}
-    </style>
-    <ul>
-        <li><div class="i-f">HTML <img class="mwi" src="https://simpleicons.org/icons/html5.svg" alt="html5"/></div></li>
-        <li><div class="i-f css"><span class="red">C</span><span class="blue">S</span><span class="green">S</span></div></li>
+    <ul style="font-weight: bold;">
+        <li>
+            <div class="i-f" style="display:inline-flex;">
+                HTML
+                <img class="mwi" src="https://simpleicons.org/icons/html5.svg" alt="html5" style="width: 15px;filter: invert();"/>
+            </div>
+        </li>
+        <li>
+            <div class="i-f css" style="display:inline-flex;">
+                <span class="red" style="color:red;">C</span>
+                <span class="green" style="color:green;">S</span>
+                <span class="blue" style="color:blue;">S</span>
+            </div>
+        </li>
         <li><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span><span class="js"></span></li>
     </ul>
+    <script>console.log("possible");</script>
