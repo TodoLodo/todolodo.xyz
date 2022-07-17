@@ -17,7 +17,7 @@ def index():
 
 
 @app.route('/status')
-def index():
+def status():
     return jsonify({
                 "schemaVersion": 1,
                 "label": "downloads",
