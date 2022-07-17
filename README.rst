@@ -2,4 +2,8 @@
 todolodo.xyz
 ============
 
-Web Portfolio
+Description
+-----------
+
+This is my personal web portfolio.
+

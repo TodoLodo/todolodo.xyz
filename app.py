@@ -16,6 +16,17 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/status')
+def index():
+    return jsonify({
+                "schemaVersion": 1,
+                "label": "downloads",
+                "labelColor": "#191919",
+                "message": "active",
+                "color": "brightgreen"
+            })
+
+
 @app.route('/', subdomain='cod-python-api')
 def sub1_index():
     return render_template("cod.html")
@@ -27,6 +38,8 @@ def sub1_stats():
     if q == 'downloads':
         response = {
             "schemaVersion": 1,
+            "namedLogo": "vercel",
+            "logoColor": "white",
             "label": "downloads",
             "labelColor": "#282E33",
             "message": 0,
