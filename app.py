@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_file
 import requests
 
 app = Flask(__name__)
@@ -70,6 +70,24 @@ def sub1_stats():
         except Exception as e:
             pass
         return jsonify(response)
+
+
+@app.route('/css/<path>', subdomain='cod-python-api')
+def css(path):
+    print(path)
+    return send_file(f"static/css/cod-python-api/{path}.css")
+
+
+@app.route('/js/<path>', subdomain='cod-python-api')
+def js(path):
+    print(path)
+    return send_file(f"static/js/cod-python-api/{path}.js")
+
+
+@app.route('/images/<path>', subdomain='cod-python-api')
+def images(path):
+    print(path)
+    return send_file(f"static/images/cod-python-api/{path}")
 
 
 @app.after_request
