@@ -1,7 +1,41 @@
 * {
     margin: 0;
     padding: 0;
+    color: white;
 }
+
+:root {
+    --dark:rgb(21, 21, 21);
+    --light: white;
+    --color1: var(--dark);
+    --blue: #306998;
+    --light-blue:#4b8bbe;
+    --yellow: #ffd43b;
+    --light-yellow:#ffe873;
+    --grey: #646464;
+    --side-gap-max: 100px;
+    --side-gap-min: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: white;
+    }
+    
+    :root {
+        --color1: var(--dark);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    * {
+        color: black;
+    }
+
+    :root {
+        --color1: var(--light);
+    }
+  }
 
 body {
     width: 100%;
@@ -12,4 +46,100 @@ body {
     position: fixed;
     height: 100vh;
     width: 100vw;
+}
+
+#top-wrapper-container {
+    z-index: 1000;
+    height: calc(100vh - 20px);
+    width: calc(100vw - 2* var(--side-gap-max));
+    top: 0;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+#top-wrapper-container div {
+    position: absolute;
+}
+
+#top-wrapper-container .heading {
+    top: 10vh;
+    transform: translateY(-50%);
+    margin-left: 20px;
+}
+
+#top-wrapper-container .nav {
+    right: 0;
+    width: 30%;
+    transition: width 0.3s;
+}
+
+#top-wrapper-container .me {
+    
+}
+
+
+#landing-wrapper-container {
+    z-index: 900;
+    background-color: #646464;
+    background-image: url("/images/landing-1.jpg");
+    animation: landing-background 30s infinite;
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes landing-background {
+    0%{
+        background-image: url("/images/landing-1.jpg");
+    }
+    12.5%{
+        background-image: url("/images/landing-2.jpg");
+    }
+    37.5%{
+        background-image: url("/images/landing-3.jpg");
+    }
+    62.5%{
+        background-image: url("/images/landing-4.jpg");
+    }
+    87.5%{
+        background-image: url("/images/landing-5.jpg");
+    }
+    100%{
+        background-image: url("/images/landing-1.jpg");
+    }
+}
+
+.flap {
+    position: absolute;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 20px);
+    border-radius: 0 0 15px 15px;
+    top: 0;
+    left: 50vw;
+    transform: translateX(-50%);
+    opacity: .95;
+}
+
+.flap path {
+    stroke-width: 0.2;
+    stroke: #ffe873;
+    fill: transparent;
+    animation: path-dash 2s cubic-bezier(0.65, 0.05, 0.36, 1) forwards, path-fill 1s 2s forwards;
+}
+
+@keyframes path-dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+@keyframes path-fill {
+    to {
+        fill: var(--color1);
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    #top-wrapper-container, .flap {
+        width: calc(100vw - 2* var(--side-gap-min));
+    }
 }
