@@ -40,8 +40,14 @@ xhr.open("POST", "/auth");
 
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
-    console.log(xhr.status);
-    console.log(xhr.responseText);
+    //console.log(xhr.status);
+    if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        document.getElementById('realname').innerText = xhr.responseText;
+    }
+    else {
+        console.log(xhr.status);
+    }
   }};
 
 let data = new FormData();

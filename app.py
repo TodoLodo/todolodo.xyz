@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, jsonify, send_file
 import requests
 import os
+import json
 
 app = Flask(__name__)
+
 
 """
 domain : todolodo.xyz
@@ -20,9 +22,12 @@ def index():
 @app.route('/auth', methods=['POST'])
 def auth():
     client = request.form['client']
-    print(client)
+    #print(client)
 
-    return os.environ['clients']
+    if client in json.loads(os.environ['clients']):
+        return os.environ['realName']
+    else:
+        return "", 401
 
 
 @app.route('/status')
