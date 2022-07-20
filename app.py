@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify, send_file
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -14,6 +15,14 @@ subdomains:
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
+@app.route('/auth', methods=['POST'])
+def auth():
+    client = request.form['client']
+    print(client)
+
+    return os.environ['clients']
 
 
 @app.route('/status')

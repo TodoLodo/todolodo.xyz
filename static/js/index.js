@@ -1,4 +1,5 @@
 let tl = document.getElementById("tl");
+let tl_svgs = document.getElementsByClassName("tl-svg")
 let _name = document.getElementById("name");
 let curr = document.getElementById("curriculum");
 let static_w = document.getElementById("static-wrapper");
@@ -15,6 +16,38 @@ let mRotateX = 0;
 pageHeightChange();
 //console.log(static_w.clientHeight/window.innerHeight) debug
 scrollbarHeightChange();
+
+// TL
+for (_svg of tl_svgs) {
+    //console.log(_svg.firstElementChild);
+    let _path = _svg.firstElementChild
+
+    let length = _path.getTotalLength();
+
+    _path.style.strokeDasharray = length;
+    _path.style.strokeDashoffset = length; 
+}
+
+// Real Name
+const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+let clientValue = params.client;
+
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "/auth");
+
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4) {
+    console.log(xhr.status);
+    console.log(xhr.responseText);
+  }};
+
+let data = new FormData();
+data.append('client', clientValue);
+xhr.send(data);
+
 
 window.addEventListener("resize", function (e) {
     pageHeightChange();

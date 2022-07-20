@@ -54,8 +54,9 @@ main {
     visibility: inherit;
     top: 50%;
     left: 50%;
-    width: 40vw;
-    transition: transform .4s;
+    height:50vh;
+    width: auto;
+    transition: transform .4s, height .3s, width .3s;
     overflow: visible!important;
     z-index: 15;
 }
@@ -95,16 +96,14 @@ main {
     overflow: visible!important;
     transform-style: preserve-3d;
     fill: none;
-    stroke-dasharray: 1000;
-    animation: tl-dashoffset 200s linear forwards;
+    opacity: 0;
+    animation: tl-dashoffset 2s linear forwards;
 }
 
 @keyframes tl-dashoffset {
-    from {
-        stroke-dashoffset: 1000;
-    }
     to {
         stroke-dashoffset: 0;
+        opacity: 1;
     }
 }
 
@@ -249,4 +248,11 @@ main {
 
 .scrolled .thanks ._2 a:hover {
     color: var(--color4);
+}
+
+@media screen and (orientation:portrait) {
+    .tl-svg {
+        height:auto;
+        width: 85vw;
+    }
 }

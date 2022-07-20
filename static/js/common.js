@@ -3,10 +3,10 @@ window.scrollTo({top: 0, behavior: 'smooth'});
 // --------- Facebook SDK ----------------------------
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '{your-app-id}',
+    appId      : '1180348332897896',
     cookie     : true,
     xfbml      : true,
-    version    : '{api-version}'
+    version    : 'v14.0'
   });
     
   FB.AppEvents.logPageView();   
