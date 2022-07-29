@@ -19,8 +19,8 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/googlr')
-def index():
+@app.route('/google')
+def google():
     return render_template("google.html")
 
 
