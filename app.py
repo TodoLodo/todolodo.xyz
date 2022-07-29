@@ -19,6 +19,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/googlr')
+def index():
+    return render_template("google.html")
+
+
 @app.route('/auth', methods=['POST'])
 def auth():
     client = request.form['client']
