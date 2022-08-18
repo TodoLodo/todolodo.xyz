@@ -40,11 +40,11 @@ window.addEventListener("deviceorientation", function (event) {
     
     if (-10 <= mRotateX <= 10) {
         dB = event.beta - B;
-        mRotateX = -dB/6;
+        mRotateX = -dB/7;
     }
     if (-10 <= mRotateY <= 10) {
         dY = event.gamma - Y;
-        mRotateY = dY/5;
+        mRotateY = dY/7;
     }
 
     tl.style.transform = `rotateX(${mRotateX}deg) rotateY(${mRotateY}deg) translate(-50%, -50%)`;
