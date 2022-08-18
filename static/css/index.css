@@ -49,6 +49,10 @@ main {
     z-index: 21;
 }
 
+.tl > * {
+    z-index: -1;
+}
+
 .tl-svg {
     position: fixed;
     visibility: inherit;
