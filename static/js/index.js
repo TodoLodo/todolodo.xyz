@@ -51,6 +51,34 @@ window.addEventListener("deviceorientation", function (event) {
 
     //console.log(`β: ${event.beta}, γ: ${event.gamma}`);
 });
+tl.addEventListener("mouseover", function(e) {
+    let elem = tl;
+    let xc = e.clientX;
+    let yc = e.clientY;
+    let rect = elem.getBoundingClientRect();
+    let width = rect.width;
+    let height = rect.height;
+    let xm = width/2;
+    let ym = height/2;
+    let rotateY = -(xc-rect.left-xm)*20/width;
+    let rotateX = (yc-rect.top-ym)*20/height;
+    console.log(rotateX, rotateY)
+    elem.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate(-50%, -50%)`;
+});
+tl.addEventListener("mouseleave", function(e) {
+    let elem = tl;
+    elem.style.transform = `rotateX(0deg) rotateY(0deg) translate(-50%, -50%)`;
+    elem.style.transitionDuration = '1s';
+});
+tl.addEventListener("click", function(e) {
+    if (tl.classList.contains("alternate-colors")) {
+        tl.classList.remove("alternate-colors");
+    }
+    else {
+        tl.classList.add("alternate-colors");
+    }
+});
+
 
 // Real Name
 const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -229,36 +257,6 @@ window.addEventListener("scroll", (event) => {
 
 });
 
-
-
-tl.addEventListener("mouseover", function(e) {
-    let elem = tl;
-    let xc = e.clientX;
-    let yc = e.clientY;
-    let rect = elem.getBoundingClientRect();
-    let width = rect.width;
-    let height = rect.height;
-    let xm = width/2;
-    let ym = height/2;
-    let rotateY = -(xc-rect.left-xm)*20/width;
-    let rotateX = (yc-rect.top-ym)*20/height;
-    elem.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate(-50%, -50%)`;
-});
-
-tl.addEventListener("mouseleave", function(e) {
-    let elem = tl;
-    elem.style.transform = `rotateX(0deg) rotateY(0deg) translate(-50%, -50%)`;
-    elem.style.transitionDuration = '1s';
-});
-
-tl.addEventListener("click", function(e) {
-    if (tl.classList.contains("alternate-colors")) {
-        tl.classList.remove("alternate-colors");
-    }
-    else {
-        tl.classList.add("alternate-colors");
-    }
-});
 
 function pageHeightChange() {
     static_w.style.height = `calc(3rem + ${static.clientHeight}px)`;
