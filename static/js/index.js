@@ -51,7 +51,7 @@ window.addEventListener("deviceorientation", function (event) {
 
     //console.log(`β: ${event.beta}, γ: ${event.gamma}`);
 });
-tl.addEventListener("mouseover", function(e) {
+tl.addEventListener("mouseenter", function(e) {
     let elem = tl;
     let xc = e.clientX;
     let yc = e.clientY;
