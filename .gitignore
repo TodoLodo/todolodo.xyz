@@ -4,3 +4,4 @@ test.py
 certbot.bat
 vercel-prod.bat
 /test.server.py
+git-update.bat

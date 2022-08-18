@@ -27,6 +27,30 @@ for (_svg of tl_svgs) {
     _path.style.strokeDasharray = length;
     _path.style.strokeDashoffset = length; 
 }
+window.addEventListener("deviceorientation", function (event) {
+    let dB, dY;
+
+    if (B === null || B === undefined) {
+        B = event.beta;
+    }
+    if (Y === null || Y === undefined) {
+        Y = event.gamma;
+    }
+
+    
+    if (-10 <= mRotateX <= 10) {
+        dB = event.beta - B;
+        mRotateX = -dB/6;
+    }
+    if (-10 <= mRotateY <= 10) {
+        dY = event.gamma - Y;
+        mRotateY = dY/5;
+    }
+
+    tl.style.transform = `rotateX(${mRotateX}deg) rotateY(${mRotateY}deg) translate(-50%, -50%)`;
+
+    //console.log(`β: ${event.beta}, γ: ${event.gamma}`);
+});
 
 // Real Name
 const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -205,31 +229,7 @@ window.addEventListener("scroll", (event) => {
 
 });
 
-window.addEventListener("deviceorientation", function (event) {
-    if (B === null || B === undefined) {
-        B = event.beta;
-    }
-    if (Y === null || Y === undefined) {
-        Y = event.gamma;
-    }
 
-    let dB, dY;
-    
-    if (-10 <= mRotateX <= 10) {
-        dB = event.beta - B;
-        mRotateX = -dB/10;
-    }
-    if (-10 <= mRotateY <= 10) {
-        dY = event.gamma - Y;
-        mRotateY = dY/10;
-    }
-
-    console.log(mRotateX);
-
-    tl.style.transform = `rotateX(${mRotateX}deg) rotateY(${mRotateY}deg) translate(-50%, -50%)`;
-
-    //console.log(`β: ${event.beta}, γ: ${event.gamma}`);
-});
 
 tl.addEventListener("mouseover", function(e) {
     let elem = tl;
